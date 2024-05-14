@@ -6,4 +6,7 @@ services:
     build:
       context: .
       dockerfile: MadWorldNL.HomeFriend.Server.Hub/Dockerfile
+    ports:
+      - "7070:8080"
+      - "7071:8081"
 
