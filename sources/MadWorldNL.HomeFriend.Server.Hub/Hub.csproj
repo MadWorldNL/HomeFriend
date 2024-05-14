@@ -20,9 +20,9 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Application\Application.csproj" />
-      <ProjectReference Include="..\Domain\Domain.csproj" />
-      <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
+      <ProjectReference Include="..\MadWorldNL.HomeFriend.Server.Application\Application.csproj" />
+      <ProjectReference Include="..\MadWorldNL.HomeFriend.Server.Domain\Domain.csproj" />
+      <ProjectReference Include="..\MadWorldNL.HomeFriend.Server.Infrastructure\Infrastructure.csproj" />
     </ItemGroup>
 
 </Project>

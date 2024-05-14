@@ -12,18 +12,18 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Clients", "Clients", "{E2E6
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Server", "Server", "{8619075F-84DC-447A-B9B2-3980B1610A4C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{7453EDB5-C4C1-4096-A4F7-1156257E439F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "MadWorldNL.HomeFriend.Server.Application\Application.csproj", "{7453EDB5-C4C1-4096-A4F7-1156257E439F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hub", "Hub\Hub.csproj", "{D4E6E7E7-1E9B-420D-AFC8-397392F5004A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hub", "MadWorldNL.HomeFriend.Server.Hub\Hub.csproj", "{D4E6E7E7-1E9B-420D-AFC8-397392F5004A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6859C5A4-24E7-43C6-931A-DC387E6D3E1D}"
 	ProjectSection(SolutionItems) = preProject
 		docker-compose.yml = docker-compose.yml
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{0708AD77-AA65-4EA3-BD59-EB7982E97581}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "MadWorldNL.HomeFriend.Server.Domain\Domain.csproj", "{0708AD77-AA65-4EA3-BD59-EB7982E97581}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{7F10CC9E-7A38-485C-963A-EB1E3F3ADEF1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "MadWorldNL.HomeFriend.Server.Infrastructure\Infrastructure.csproj", "{7F10CC9E-7A38-485C-963A-EB1E3F3ADEF1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
