@@ -1,0 +1,6 @@
+﻿services:
+  madworldnl.homefriend.server.hub:
+    image: madworldnl.homefriend.server.hub
+    build:
+      context: .
+      dockerfile: MadWorldNL.HomeFriend.Server.Hub/Dockerfile

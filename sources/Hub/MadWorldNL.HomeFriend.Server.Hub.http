@@ -1,0 +1,6 @@
+@MadWorldNL.HomeFriend.Server.Hub_HostAddress = http://localhost:5032
+
+GET {{MadWorldNL.HomeFriend.Server.Hub_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
