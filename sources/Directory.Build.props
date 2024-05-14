@@ -1,0 +1,21 @@
+<Project>
+    <PropertyGroup>
+        <Company>Mad-World.nl</Company>
+        <Copyright>Copyright (c) Mad-World.nl 2024</Copyright>
+        <Authors>Oscar Veldman</Authors>
+        <Product>HomeFriend</Product>
+    </PropertyGroup>
+    
+    <PropertyGroup>
+        <RootNamespace>MadWorldNL.HomeFriend</RootNamespace>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+        <ImplicitUsings>true</ImplicitUsings>
+        <Deterministic>true</Deterministic>
+    </PropertyGroup>
+    
+    <PropertyGroup>
+        
+    </PropertyGroup>
+</Project>
