@@ -9,4 +9,12 @@ services:
     ports:
       - "7070:8080"
       - "7071:8081"
+  madworldnl.homefriend.clients.portal:
+    image: madworldnl.homefriend.clients.portal
+    container_name: portal
+    build:
+      context: .
+      dockerfile: MadWorldNL.HomeFriend.Clients.Portal/Dev.Dockerfile
+    ports:
+      - "80:80"
 
