@@ -16,5 +16,12 @@ services:
       context: .
       dockerfile: MadWorldNL.HomeFriend.Clients.Portal/Dev.Dockerfile
     ports:
-      - "80:80"
+      - "7072:80"
+  postgres:
+    image: postgres
+    container_name: database
+    environment:
+      - POSTGRES_PASSWORD=mysecretpassword
+    ports:
+      - "7073:5432"
 
