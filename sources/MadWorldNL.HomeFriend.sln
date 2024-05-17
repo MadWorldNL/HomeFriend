@@ -31,6 +31,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Portal", "Portal", "{272B22
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portal", "MadWorldNL.HomeFriend.Clients.Portal\Portal.csproj", "{128B93DB-04CA-4591-AD5F-2C0F5FC36470}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Workflows", "Workflows", "{C6FA4D47-D610-43DC-9A3C-B52340E0EDA9}"
+	ProjectSection(SolutionItems) = preProject
+		..\.github\workflows\build-hub.yaml = ..\.github\workflows\build-hub.yaml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +52,7 @@ Global
 		{7F10CC9E-7A38-485C-963A-EB1E3F3ADEF1} = {8619075F-84DC-447A-B9B2-3980B1610A4C}
 		{272B2289-7101-45DB-8869-7AA847EB4DCB} = {E2E6F463-E50C-48F2-9113-4AC5A87DC595}
 		{128B93DB-04CA-4591-AD5F-2C0F5FC36470} = {272B2289-7101-45DB-8869-7AA847EB4DCB}
+		{C6FA4D47-D610-43DC-9A3C-B52340E0EDA9} = {6859C5A4-24E7-43C6-931A-DC387E6D3E1D}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{7453EDB5-C4C1-4096-A4F7-1156257E439F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
