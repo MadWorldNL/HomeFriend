@@ -1,5 +1,13 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <RootNamespace>MadWorldNL.GreenChoice</RootNamespace>
+  </PropertyGroup>
+  
   <ItemGroup>
     <ProjectReference Include="..\MadWorldNL.ThirdParties.Energy.Domain\Energy.Domain.csproj" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="HtmlAgilityPack" />
   </ItemGroup>
 </Project>
