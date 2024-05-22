@@ -1,0 +1,11 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\MadWorld.ThirdParties.GreenChoice.ClientSDK\GreenChoice.ClientSDK.csproj" />
+    </ItemGroup>
+
+</Project>

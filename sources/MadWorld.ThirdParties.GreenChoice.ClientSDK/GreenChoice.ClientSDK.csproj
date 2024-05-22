@@ -1,0 +1,5 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <ProjectReference Include="..\MadWorldNL.ThirdParties.Energy.Domain\Energy.Domain.csproj" />
+  </ItemGroup>
+</Project>
