@@ -5,9 +5,6 @@ namespace MadWorldNL.GreenChoice.Authentication;
 
 public class AuthenticationService
 {
-    private const string SsoUrl =
-        "https://sso.greenchoice.nl/Account/Login?ReturnUrl=/connect/authorize/callback?client_id=app-mijngreenchoice&redirect_uri=https%3A%2F%2Fmijn.greenchoice.nl%2Fsignin-oidc&response_type=code&scope=openid%20profile%20id&code_challenge={0}&code_challenge_method=S256&response_mode=form_post&nonce={1}&x-client-SKU=ID_NET8_0&x-client-ver=7.1.2.0";
-    
     public AuthenticationService()
     {
         
