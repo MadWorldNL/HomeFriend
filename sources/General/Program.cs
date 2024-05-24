@@ -11,9 +11,9 @@ var account = new Account()
     Password = ""
 };
 
-var statisticService = new StatisticsService(new AuthenticationService(account));
+var statisticService = new StatisticsRetriever(new StatisticsService(new AuthenticationService(account)));
 
 var now = DateTime.Now;
-var stats = await statisticService.Get(now.AddDays(-7), now);
+var stats = await statisticService.RetrieveHistory(now.AddDays(-7), now);
 
 Console.ReadLine();

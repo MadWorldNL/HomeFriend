@@ -3,7 +3,7 @@ using MadWorldNL.GreenChoice.Authentication;
 
 namespace MadWorldNL.GreenChoice.Statistics;
 
-public sealed class StatisticsService
+public sealed class StatisticsService : IStatisticsService
 {
     private const string MyAccountUrl = "https://mijn.greenchoice.nl";
     
