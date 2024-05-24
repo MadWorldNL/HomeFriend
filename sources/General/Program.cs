@@ -12,6 +12,8 @@ var account = new Account()
 };
 
 var statisticService = new StatisticsService(new AuthenticationService(account));
-var stats = await statisticService.Get();
+
+var now = DateTime.Now;
+var stats = await statisticService.Get(now.AddDays(-7), now);
 
 Console.ReadLine();

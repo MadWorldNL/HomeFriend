@@ -1,8 +1,9 @@
+using System.Net.Http.Json;
 using MadWorldNL.GreenChoice.Authentication;
 
 namespace MadWorldNL.GreenChoice.Statistics;
 
-public class StatisticsService
+public sealed class StatisticsService
 {
     private const string MyAccountUrl = "https://mijn.greenchoice.nl";
     
@@ -13,7 +14,7 @@ public class StatisticsService
         _authenticationService = authenticationService;
     }
 
-    public async Task<string> Get()
+    public async Task<Consumption> Get(DateTime start, DateTime end)
     {
         var session = await _authenticationService.LoginAsync();
 
@@ -28,7 +29,8 @@ public class StatisticsService
         };
         
         var responseStats = await client.GetAsync(
-            "/api/consumption?interval=day&start=2024-05-01&end=2024-06-01");
-        return await responseStats.Content!.ReadAsStringAsync();
+            $"/api/consumption?interval=day&start={start:yyyy-MM-dd}&end={end:yyyy-MM-dd}");
+        
+        return await responseStats.Content!.ReadFromJsonAsync<Consumption>() ?? new Consumption();
     }
 }
