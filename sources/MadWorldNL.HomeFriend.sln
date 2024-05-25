@@ -48,6 +48,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Debug", "Debug", "{E019735E
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "General", "General\General.csproj", "{A5E92414-41BA-4962-8E60-0C3DEB5116F5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreenChoice.AspNetCore", "MadWorldNL.ThirdParties.GreenChoice.AspNetCore\GreenChoice.AspNetCore.csproj", "{AC0F4912-03F6-4F9E-B8D3-6F54A1B0E30B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -70,6 +72,7 @@ Global
 		{3EADE109-8103-4DD1-85BF-247D93C46029} = {1A1FE48B-BDD7-41B7-BDFE-9373F20A4F9C}
 		{E019735E-8DEA-4572-80D5-4BEC74C610E5} = {E2E6F463-E50C-48F2-9113-4AC5A87DC595}
 		{A5E92414-41BA-4962-8E60-0C3DEB5116F5} = {E019735E-8DEA-4572-80D5-4BEC74C610E5}
+		{AC0F4912-03F6-4F9E-B8D3-6F54A1B0E30B} = {1A1FE48B-BDD7-41B7-BDFE-9373F20A4F9C}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{7453EDB5-C4C1-4096-A4F7-1156257E439F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -104,5 +107,9 @@ Global
 		{A5E92414-41BA-4962-8E60-0C3DEB5116F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A5E92414-41BA-4962-8E60-0C3DEB5116F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A5E92414-41BA-4962-8E60-0C3DEB5116F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC0F4912-03F6-4F9E-B8D3-6F54A1B0E30B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC0F4912-03F6-4F9E-B8D3-6F54A1B0E30B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC0F4912-03F6-4F9E-B8D3-6F54A1B0E30B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC0F4912-03F6-4F9E-B8D3-6F54A1B0E30B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
