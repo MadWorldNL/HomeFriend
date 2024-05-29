@@ -1,14 +1,15 @@
 using MadWorldNL.GreenChoice.Extensions;
+using MadWorldNL.HomeFriend.Energy;
 using MadWorldNL.HomeFriend.Status;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.AddGreenChoiceApi(options =>
+builder.Services.AddEnergyInfrastructure(builder.Configuration.GetValue<EnergyOptions>(EnergyOptions.Key)!);
+
+builder.Services.AddGreenChoiceApi(options =>
 {
     options.Username = builder.Configuration.GetValue<string>("GreenChoice:Username")!;
     options.Password = builder.Configuration.GetValue<string>("GreenChoice:Password")!;

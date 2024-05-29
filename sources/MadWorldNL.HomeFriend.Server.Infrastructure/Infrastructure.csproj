@@ -2,4 +2,7 @@
     <ItemGroup>
       <ProjectReference Include="..\MadWorldNL.HomeFriend.Server.Domain\Domain.csproj" />
     </ItemGroup>
+    <ItemGroup>
+      <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" />
+    </ItemGroup>
 </Project>
