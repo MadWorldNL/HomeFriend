@@ -1,4 +1,5 @@
 using MadWorldNL.Energy.Statistics;
+using MadWorldNL.HomeFriend.Time;
 
 namespace MadWorldNL.HomeFriend.Energy.Mappers;
 
@@ -22,10 +23,5 @@ public static class ConsumptionHistoryExtensions
             Measured = consumption.TotalConsumption,
             TimestampUtc = consumption.Timestamp.ConvertToUtc()
         };
-    }
-
-    private static DateTime ConvertToUtc(this DateTime dateTime)
-    {
-        return new DateTime(dateTime.Year, dateTime.Month, dateTime.Day, 0, 0, 0, DateTimeKind.Utc);
     }
 }

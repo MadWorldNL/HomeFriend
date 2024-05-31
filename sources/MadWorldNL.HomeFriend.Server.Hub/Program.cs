@@ -10,6 +10,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var energyOptions = builder.Configuration.GetSection(EnergyOptions.Key).Get<EnergyOptions>()!;
+builder.Services.AddEnergyApplication();
 builder.Services.AddEnergyInfrastructure(energyOptions);
 
 builder.Services.AddGreenChoiceApi(options =>
@@ -30,6 +31,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.AddEnergyEndpoints();
 app.AddStatusEndpoints();
 
 app.UseHttpsRedirection();
