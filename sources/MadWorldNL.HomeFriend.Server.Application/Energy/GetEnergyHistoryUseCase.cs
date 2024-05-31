@@ -1,3 +1,5 @@
+using System.Security.Claims;
+using MadWorldNL.HomeFriend.Energy.Mappers;
 using MadWorldNL.HomeFriend.Time;
 
 namespace MadWorldNL.HomeFriend.Energy;
@@ -19,6 +21,14 @@ public class GetEnergyHistoryUseCase
         var electricConsumptions = _consumptionRepository.GetElectrics(request.Start, request.End);
         var gasConsumptions = _consumptionRepository.GetGases(request.Start, request.End);
 
-        return new GetEnergyHistoryResponse();
+        return new GetEnergyHistoryResponse()
+        {
+            ElectricConsumptions = electricConsumptions
+                .Select(c => c.ToDto())
+                .ToList(),
+            GasConsumptions = gasConsumptions
+                .Select(c => c.ToDto())
+                .ToList()
+        };
     }
 }
