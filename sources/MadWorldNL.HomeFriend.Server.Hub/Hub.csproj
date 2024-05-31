@@ -6,7 +6,19 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="Hangfire" />
+        <PackageReference Include="Hangfire.AspNetCore" />
+        <PackageReference Include="Hangfire.Core" />
+        <PackageReference Include="Hangfire.InMemory" />
         <PackageReference Include="Microsoft.AspNetCore.OpenApi" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
         <PackageReference Include="Swashbuckle.AspNetCore" />
     </ItemGroup>
 
@@ -21,6 +33,13 @@
       <ProjectReference Include="..\MadWorldNL.HomeFriend.Server.Domain\Domain.csproj" />
       <ProjectReference Include="..\MadWorldNL.HomeFriend.Server.Infrastructure\Infrastructure.csproj" />
       <ProjectReference Include="..\MadWorldNL.ThirdParties.GreenChoice.AspNetCore\GreenChoice.AspNetCore.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageVersion Update="Microsoft.EntityFrameworkCore.Design" Version="8.0.4">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageVersion>
     </ItemGroup>
 
 </Project>

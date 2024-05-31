@@ -11,7 +11,7 @@ var account = new Account()
     Password = ""
 };
 
-var statisticService = new StatisticsRetriever(new StatisticsService(new AuthenticationService(account)));
+var statisticService = new EnergyStatisticsRetriever(new StatisticsService(new AuthenticationService(account)));
 
 var now = DateTime.Now;
 var stats = await statisticService.RetrieveHistory(now.AddDays(-7), now);

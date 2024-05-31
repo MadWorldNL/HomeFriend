@@ -14,6 +14,6 @@ public static class ServiceCollectionExtensions
 
         services.AddScoped<IAuthenticationService>(_ => new AuthenticationService(account));
         services.AddScoped<IStatisticsService, StatisticsService>();
-        services.AddScoped<IStatisticsRetriever, StatisticsRetriever>();
+        services.AddScoped<IEnergyStatisticsRetriever, EnergyStatisticsRetriever>();
     }
 }

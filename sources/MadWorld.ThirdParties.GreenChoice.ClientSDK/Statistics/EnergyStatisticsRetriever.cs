@@ -2,7 +2,7 @@ using MadWorldNL.Energy.Statistics;
 
 namespace MadWorldNL.GreenChoice.Statistics;
 
-public class StatisticsRetriever(IStatisticsService statisticsService) : IStatisticsRetriever
+public class EnergyStatisticsRetriever(IStatisticsService statisticsService) : IEnergyStatisticsRetriever
 {
     public async Task<History> RetrieveHistory(DateTime start, DateTime end)
     {
