@@ -4,19 +4,11 @@ namespace MadWorldNL.HomeFriend.Energy;
 
 public static class ServiceProviderExtensions
 {
-    public static void AddEnergyJobs(this IServiceProvider services)
+    public static void AddEnergyJobs(this IServiceProvider _)
     {
         RecurringJob.AddOrUpdate<ImportConsumptionsUseCase>(
             nameof(ImportConsumptionsUseCase),
-            useCase => StartImportConsumptions(useCase),
+            useCase => useCase.ImportAsync(DateTime.UtcNow, DateTime.UtcNow.AddDays(-7)),
             Cron.Daily(5));
-    }
-
-    private static Task StartImportConsumptions(ImportConsumptionsUseCase useCase)
-    {
-        var now = DateTime.UtcNow;
-        var startDate = now.AddDays(-7);
-
-        return useCase.ImportAsync(startDate, now);
     }
 }

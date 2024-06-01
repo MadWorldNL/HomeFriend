@@ -7,5 +7,6 @@ public static class ServiceCollectionExtensions
     public static void AddEnergyApplication(this IServiceCollection services)
     {
         services.AddScoped<GetEnergyHistoryUseCase>();
+        services.AddScoped<ImportConsumptionsUseCase>();
     }
 }
