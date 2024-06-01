@@ -14,14 +14,14 @@ public class ImportConsumptionsUseCase
         _energyRepository = energyRepository;
     }
     
-    public async Task ImportAsync()
+    public async Task ImportAsync(DateTime start, DateTime ends)
     {
         var now = DateTime.UtcNow;
         var startDate = now.AddDays(-7);
         
-        var history = await _statisticsRetriever.RetrieveHistory(startDate, now);
-        await SaveElectrics(history.ElectricConsumptions, startDate, now);
-        await SaveGases(history.GasConsumptions, startDate, now);
+        var history = await _statisticsRetriever.RetrieveHistory(start, ends);
+        await SaveElectrics(history.ElectricConsumptions, start, ends);
+        await SaveGases(history.GasConsumptions, start, ends);
     }
 
     private async Task SaveElectrics(List<ConsumptionHistory> consumptions, DateTime start, DateTime ends)
