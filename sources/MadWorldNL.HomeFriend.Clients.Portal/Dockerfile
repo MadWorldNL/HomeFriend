@@ -1,5 +1,7 @@
 ﻿FROM  --platform=$BUILDPLATFORM nginx:latest AS base
 ARG BUILDPLATFORM
+ARG DEVEXPRESS_FEED
+
 EXPOSE 80
 EXPOSE 443
 
@@ -7,6 +9,8 @@ FROM  --platform=$BUILDPLATFORM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILDPLATFORM
 
 WORKDIR /src
+RUN dotnet nuget add source ${DEVEXPRESS_FEED} -n devexpress-nuget
+
 COPY ["Directory.Build.props", "/"]
 COPY ["Directory.Packages.props", "/"]
 COPY ["MadWorldNL.HomeFriend.Clients.Portal/Portal.csproj", "MadWorldNL.HomeFriend.Clients.Portal/"]

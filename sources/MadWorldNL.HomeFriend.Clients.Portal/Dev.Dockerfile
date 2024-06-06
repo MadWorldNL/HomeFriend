@@ -1,9 +1,13 @@
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+ARG DEVEXPRESS_FEED
+
 WORKDIR /app
 EXPOSE 80
 
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
+RUN dotnet nuget add source ${DEVEXPRESS_FEED} -n devexpress-nuget
+
 COPY ["Directory.Build.props", "/"]
 COPY ["Directory.Packages.props", "/"]
 COPY ["MadWorldNL.HomeFriend.Clients.Portal/Portal.csproj", "MadWorldNL.HomeFriend.Clients.Portal/"]

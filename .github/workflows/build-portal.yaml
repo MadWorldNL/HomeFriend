@@ -42,6 +42,8 @@ jobs:
         with:
           context: ./sources
           file: ./sources/MadWorldNL.HomeFriend.Clients.Portal/Dockerfile
+          secrets: |
+            "DEVEXPRESS_FEED=${{ secrets.DEVEXPRESS_FEED }}"
           push: true
           platforms: ${{ env.PLATFORM_BUILDS }}
           tags: ${{ steps.meta.outputs.tags }}
