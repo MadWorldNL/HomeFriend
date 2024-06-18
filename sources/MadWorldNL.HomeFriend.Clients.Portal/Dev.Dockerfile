@@ -10,6 +10,7 @@ ARG NUGET_ACCESS_TOKEN
 
 WORKDIR /src
 # Add NuGet source
+RUN dotnet nuget add source https://api.nuget.org/v3/index.json -n nuget.org
 RUN dotnet nuget add source \
     --username "${NUGET_USERNAME}" \
     --password "${NUGET_ACCESS_TOKEN}" \
