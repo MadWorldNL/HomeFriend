@@ -23,6 +23,8 @@ RUN dotnet nuget add source \
     
 COPY ["Directory.Build.props", "/"]
 COPY ["Directory.Packages.props", "/"]
+COPY ["Nuget.config", "/"]
+
 COPY ["MadWorldNL.HomeFriend.Clients.Portal/Portal.csproj", "MadWorldNL.HomeFriend.Clients.Portal/"]
 RUN dotnet restore "MadWorldNL.HomeFriend.Clients.Portal/Portal.csproj"
 COPY . .
