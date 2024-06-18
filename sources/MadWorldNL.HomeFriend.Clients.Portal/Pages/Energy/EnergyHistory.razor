@@ -1,0 +1,60 @@
+@page "/Energy/History"
+
+@using MadWorldNL.HomeFriend.Energy
+
+<h3>EnergyHistory</h3>
+
+<DxChart Data="@Consumptions">
+    <DxChartLineSeries Name="Electric cost"
+                       Filter="@((ConsumptionContract c) => c.Type == "Electric")"
+                       ArgumentField="@(c => c.Timestamp)"
+                       ValueField="@(c => c.Cost)"
+                       SummaryMethod="Enumerable.Sum"/>
+    <DxChartLineSeries Name="Gas cost"
+                       Filter="@((ConsumptionContract c) => c.Type == "Gas")"
+                       ArgumentField="@(c => c.Timestamp)"
+                       ValueField="@(c => c.Cost)"
+                       SummaryMethod="Enumerable.Sum"/>
+    <DxChartLineSeries Name="Total cost"
+                       Filter="@((ConsumptionContract c) => true)"
+                       ArgumentField="@(c => c.Timestamp)"
+                       ValueField="@(c => c.Cost)"
+                       SummaryMethod="Enumerable.Sum"/>
+    <DxChartLegend Position="RelativePosition.Outside" HorizontalAlignment="HorizontalAlignment.Right" />
+</DxChart>
+
+@code {
+    IEnumerable<ConsumptionContract> Consumptions = [];
+
+    protected override void OnInitialized()
+    {
+        Consumptions =
+        [
+            new ConsumptionContract()
+            {
+                Type = "Electric",
+                Timestamp = new DateTime(2024, 10, 10),
+                Cost = 10
+            },
+            new ConsumptionContract()
+            {
+                Type = "Gas",
+                Timestamp = new DateTime(2024, 10, 10),
+                Cost = 11
+            },
+            new ConsumptionContract()
+            {
+                Type = "Electric",
+                Timestamp = new DateTime(2024, 10, 11),
+                Cost = 20
+            },
+            new ConsumptionContract()
+            {
+                Type = "Gas",
+                Timestamp = new DateTime(2024, 10, 11),
+                Cost = 22
+            },
+        ];
+    }
+
+}

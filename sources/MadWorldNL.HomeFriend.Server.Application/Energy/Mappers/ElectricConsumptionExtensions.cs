@@ -6,6 +6,7 @@ public static class ElectricConsumptionExtensions
     {
         return new ConsumptionContract()
         {
+            Type = "Electric",
             Cost = consumption.Cost,
             Currency = ElectricConsumption.Currency,
             Measured = consumption.Measured,
