@@ -11,7 +11,9 @@ services:
       - "7071:8081"
   madworldnl.homefriend.clients.portal:
     environment:
-      DEVEXPRESS_FEED: ${DEVEXPRESS_NUGET_FEED}
+      PRIVATE_MADWORLD_FEED: ${PRIVATE_MADWORLD_FEED}
+      NUGET_USERNAME: ${NUGET_USERNAME}
+      NUGET_ACCESS_TOKEN: ${NUGET_ACCESS_TOKEN}
     image: madworldnl.homefriend.clients.portal
     container_name: portal
     build:

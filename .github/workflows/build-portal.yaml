@@ -43,7 +43,9 @@ jobs:
           context: ./sources
           file: ./sources/MadWorldNL.HomeFriend.Clients.Portal/Dockerfile
           secrets: |
-            "DEVEXPRESS_FEED=${{ secrets.DEVEXPRESS_FEED }}"
+            "PRIVATE_MADWORLD_FEED=${{ secrets.PRIVATE_MADWORLD_FEED }}"
+            "NUGET_USERNAME=${{ secrets.NUGET_USERNAME }}"
+            "NUGET_ACCESS_TOKEN=${{ secrets.NUGET_ACCESS_TOKEN }}"
           push: true
           platforms: ${{ env.PLATFORM_BUILDS }}
           tags: ${{ steps.meta.outputs.tags }}
