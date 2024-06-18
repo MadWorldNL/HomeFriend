@@ -1,18 +1,23 @@
 ﻿FROM  --platform=$BUILDPLATFORM nginx:latest AS base
 ARG BUILDPLATFORM
-ARG PRIVATE_MADWORLD_FEED
-ARG NUGET_USERNAME
-ARG NUGET_ACCESS_TOKEN
 
 EXPOSE 80
 EXPOSE 443
 
 FROM  --platform=$BUILDPLATFORM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILDPLATFORM
+ARG PRIVATE_MADWORLD_FEED
+ARG NUGET_USERNAME
+ARG NUGET_ACCESS_TOKEN
 
 WORKDIR /src
-RUN dotnet nuget add source --username ${NUGET_USERNAME} --password ${NUGET_ACCESS_TOKEN} --store-password-in-clear-text --name PrivateMadWorld "${PRIVATE_MADWORLD_FEED}"
-
+# Add NuGet source
+RUN dotnet nuget add source \
+    --username "${NUGET_USERNAME}" \
+    --password "${NUGET_ACCESS_TOKEN}" \
+    --store-password-in-clear-text \
+    --name PrivateMadWorld "${PRIVATE_MADWORLD_FEED}" \
+    
 COPY ["Directory.Build.props", "/"]
 COPY ["Directory.Packages.props", "/"]
 COPY ["MadWorldNL.HomeFriend.Clients.Portal/Portal.csproj", "MadWorldNL.HomeFriend.Clients.Portal/"]
