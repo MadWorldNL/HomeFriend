@@ -10,7 +10,6 @@ ARG NUGET_ACCESS_TOKEN
 
 WORKDIR /src
 # Add NuGet source
-RUN dotnet nuget add source https://api.nuget.org/v3/index.json -n nuget.org
 RUN dotnet nuget add source \
     --username "${NUGET_USERNAME}" \
     --password "${NUGET_ACCESS_TOKEN}" \
@@ -19,7 +18,7 @@ RUN dotnet nuget add source \
     
 COPY ["Directory.Build.props", "/"]
 COPY ["Directory.Packages.props", "/"]
-COPY ["Nuget.config", "/"]
+COPY ["Nuget.config", "/src"]
 
 COPY ["MadWorldNL.HomeFriend.Clients.Portal/Portal.csproj", "MadWorldNL.HomeFriend.Clients.Portal/"]
 RUN dotnet restore "MadWorldNL.HomeFriend.Clients.Portal/Portal.csproj" --configfile /Nuget.config
