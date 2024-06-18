@@ -13,7 +13,7 @@ RUN dotnet nuget add source \
     --username "${NUGET_USERNAME}" \
     --password "${NUGET_ACCESS_TOKEN}" \
     --store-password-in-clear-text \
-    --name PrivateMadWorld "${PRIVATE_MADWORLD_FEED}" \
+    --name PrivateMadWorld "${PRIVATE_MADWORLD_FEED}"
     
 COPY ["Directory.Build.props", "/"]
 COPY ["Directory.Packages.props", "/"]
