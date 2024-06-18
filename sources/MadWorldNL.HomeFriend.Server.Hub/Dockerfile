@@ -11,7 +11,8 @@ ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 COPY ["Directory.Build.props", "/"]
 COPY ["Directory.Packages.props", "/"]
-COPY ["Nuget.config", "/"]
+COPY ["NuGet.Config", "/"]
+
 COPY ["MadWorldNL.HomeFriend.Server.Hub/Hub.csproj", "MadWorldNL.HomeFriend.Server.Hub/"]
 RUN dotnet restore "MadWorldNL.HomeFriend.Server.Hub/Hub.csproj"
 COPY . .
