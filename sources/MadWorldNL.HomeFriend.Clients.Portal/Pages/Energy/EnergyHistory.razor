@@ -1,8 +1,31 @@
 @page "/Energy/History"
 
+@using MadWorldNL.HomeFriend.Domain.Energy
 @using MadWorldNL.HomeFriend.Energy
 
-<h3>EnergyHistory</h3>
+<h3>Energy History</h3>
+
+<div class="row">
+    <div class="col">
+        <label for="cbOverview" class="demo-text cw-480 mb-1">
+            Month
+        </label>
+        <DxComboBox Data="@Months"
+                    TextFieldName="@nameof(MonthSelection.Text)"
+                    @bind-Value="@SelectionMonth"
+                    CssClass="cw-480"
+                    InputId="cbOverview"/>
+    </div>
+    <div class="col">
+        <label for="cbOverview" class="demo-text cw-480 mb-1">
+            Year
+        </label>
+        <DxComboBox Data="@Years"
+                    @bind-Value="@SelectedYear"
+                    CssClass="cw-480"
+                    InputId="cbOverview"/>
+    </div>
+</div>
 
 <DxChart Data="@Consumptions">
     <DxChartLineSeries Name="Electric cost"
@@ -22,39 +45,3 @@
                        SummaryMethod="Enumerable.Sum"/>
     <DxChartLegend Position="RelativePosition.Outside" HorizontalAlignment="HorizontalAlignment.Right" />
 </DxChart>
-
-@code {
-    IEnumerable<ConsumptionContract> Consumptions = [];
-
-    protected override void OnInitialized()
-    {
-        Consumptions =
-        [
-            new ConsumptionContract()
-            {
-                Type = "Electric",
-                Timestamp = new DateTime(2024, 10, 10),
-                Cost = 10
-            },
-            new ConsumptionContract()
-            {
-                Type = "Gas",
-                Timestamp = new DateTime(2024, 10, 10),
-                Cost = 11
-            },
-            new ConsumptionContract()
-            {
-                Type = "Electric",
-                Timestamp = new DateTime(2024, 10, 11),
-                Cost = 20
-            },
-            new ConsumptionContract()
-            {
-                Type = "Gas",
-                Timestamp = new DateTime(2024, 10, 11),
-                Cost = 22
-            },
-        ];
-    }
-
-}

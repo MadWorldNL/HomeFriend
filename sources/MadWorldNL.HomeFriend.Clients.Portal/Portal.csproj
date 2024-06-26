@@ -23,5 +23,9 @@
     <ItemGroup>
       <ProjectReference Include="..\MadWorldNL.HomeFriend.Server.Contracts\Contracts.csproj" />
     </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Services\Energy\" />
+    </ItemGroup>
     
 </Project>
